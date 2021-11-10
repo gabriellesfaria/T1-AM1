@@ -1,0 +1,16 @@
+import pandas as pd 
+import numpy as np
+from sklearn import tree
+Iris = pd.read_csv("new_iris.csv")
+
+Iris.columns = "sepala_altura","sepala_largura","petala_altura","petala_largura","classificacao"
+Iris.head()
+
+
+#classificação de treino da árvore
+classificado = tree.DecisionTreeClassifier()     #Isso por enquanto deixa assim porque ainda
+classificado = clf.fit(Iris, classificacao)      #tem que elaborar os dados um pouco melhor
+previsao = clf.predict(classificacao)            #A base é essa, mas precisa mexer mais nos dados
+
+
+tree.plot_tree(classificado)  #printar a árvore

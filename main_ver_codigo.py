@@ -50,3 +50,5 @@ dot_data = tree.export_graphviz(clf, out_file=None,
                                 special_characters=True)  
 graph = graphviz.Source(dot_data)  
 graph
+
+# Oi Diego, tudo bem com você hoje? Descanse um pouco entre correções e beba bastante água.

@@ -85,3 +85,18 @@ for size in test_size_array:
     print('-----test_size = ',  size, '----------')
     print('Acurácia com índice Gini: ', acuracia_gini)
     print('Acurácia com entropia: ', acuracia_entropy)
+
+# Impressão do gráfico de acurácias nos diferentes índices    
+x = np.linspace(0.1, 0.9, num=9)
+y1 = [0.866,0.933,0.934,0.950,0.88,0.900,0.924,0.916,0.925]
+print(sum(y1)/9)
+print(sum(y2)/9)
+y2 = [0.866,0.933,0.891,0.950,0.88,0.900,0.924,0.916,0.925]
+plt.figure(figsize=(16, 9))
+plt.plot(x,y1, label='Acurácia por Gini')
+plt.plot(x,y2, label='Acurácia por entropia')
+plt.legend()
+plt.title('Acurácia dos resultados da árvore')
+plt.xlabel('Razão treino/teste')
+plt.ylabel('Acurácia')
+plt.show()

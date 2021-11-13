@@ -24,6 +24,12 @@ X_train, X_test, y_train, y_test = train_test_split(iris_data,
                                                     test_size=0.3, 
                                                     random_state=1)
 
+# Mostra o tamanho dos dados de treino e teste
+print(X_train.shape)
+print(X_test.shape)
+print(y_train.shape)
+print(y_test.shape)
+
 # Classificação de treino da árvore
 clf = tree.DecisionTreeClassifier() 
 clf = clf.fit(X_train, y_train)     
